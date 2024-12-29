@@ -16,10 +16,16 @@ struct RemovableCell: View {
   var body: some View {
     ZStack {
       //Background Rectnagle
-      Rectangle()
-        .frame(maxHeight: 77)
-        .clipShape(RoundedRectangle(cornerRadius: 16))
-        .foregroundStyle(Color.red)
+      ZStack(alignment: .trailing){
+        Rectangle()
+          .frame(maxHeight: 77)
+          .clipShape(RoundedRectangle(cornerRadius: 16))
+          .foregroundStyle(Color.red)
+        
+        Image(systemName: "trash")
+          .foregroundStyle(Color.white)
+          .padding()
+      }
       
       //Cell
       VStack(alignment: .leading) {
