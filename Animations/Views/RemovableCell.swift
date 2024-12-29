@@ -46,7 +46,9 @@ struct RemovableCell: View {
             }
           }
           .onEnded { _ in
-            dragOffset = .zero
+            withAnimation {
+              dragOffset = .zero
+            }
           }
       )
     }
